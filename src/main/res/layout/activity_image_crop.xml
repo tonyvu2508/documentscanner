@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ /**
+  ~  * Created by Ali YÜCE on 3/2/20 11:18 PM
+  ~  * https://github.com/mayuce/
+  ~  * Copyright (c) 2020 . All rights reserved.
+  ~  * Last modified 3/2/20 11:10 PM
+  ~  */
+  -->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.labters.documentscanner.ImageCropActivity"
+    android:background="#000"
+    android:id="@+id/rlContainer"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.labters.documentscanner.ImageCropActivity"
+        android:background="#000"
+        android:orientation="vertical"
+        android:weightSum="10">
+        <RelativeLayout
+            android:background="#fff"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <!--            <ImageView-->
+            <!--                    android:id="@+id/ivRotate"-->
+            <!--                    android:layout_width="40dp"-->
+            <!--                    android:layout_height="40dp"-->
+            <!--                    android:padding="5dp"-->
+            <!--                    android:layout_marginEnd="8dp"-->
+            <!--                    android:layout_marginTop="8dp"-->
+            <!--                    android:src="@drawable/ic_rotate"-->
+            <!--                    android:foreground="?android:selectableItemBackground"-->
+            <!--                    android:layout_alignParentEnd="true"-->
+            <!--                    android:layout_centerVertical="true"-->
+            <!--            />-->
+            <TextView
+                android:id="@+id/btnImageCrop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="次へ"
+                android:foreground="?android:selectableItemBackground"
+                android:padding="5dp"
+                android:layout_marginEnd="8dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:textColor="#000"
+                />
+            <!--            <ImageView-->
+            <!--                    android:id="@+id/ivRebase"-->
+            <!--                    android:layout_width="40dp"-->
+            <!--                    android:layout_height="40dp"-->
+            <!--                    android:padding="5dp"-->
+            <!--                    android:src="@drawable/ic_align"-->
+            <!--                    android:foreground="?android:selectableItemBackground"-->
+            <!--                    android:layout_centerInParent="true"-->
+            <!--                    android:layout_centerVertical="true"-->
+            <!--            />-->
+            <TextView
+                android:id="@+id/ivTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="編集"
+                android:foreground="?android:selectableItemBackground"
+                android:padding="5dp"
+                android:layout_marginEnd="8dp"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:textFontWeight="600"
+                />
+            <!--            <ImageView-->
+            <!--                    android:id="@+id/ivInvert"-->
+            <!--                    android:layout_width="40dp"-->
+            <!--                    android:layout_height="40dp"-->
+            <!--                    android:padding="5dp"-->
+            <!--                    android:src="@drawable/ic_invert_colors"-->
+            <!--                    android:foreground="?android:selectableItemBackground"-->
+            <!--                    android:layout_alignParentStart="true"-->
+            <!--                    android:layout_centerVertical="true"-->
+            <!--            />-->
+            <TextView
+                android:id="@+id/btnClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="キャンセル"
+                android:foreground="?android:selectableItemBackground"
+                android:padding="5dp"
+                android:layout_marginEnd="8dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:textColor="#000"
+                />
+        </RelativeLayout>
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8"
+            android:layout_gravity="center"
+            android:layout_margin="0dp">
+
+            <FrameLayout
+                android:id="@+id/holderImageCrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="12dp">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"/>
+            </FrameLayout>
+
+            <com.labters.documentscanner.libraries.PolygonView
+                android:id="@+id/polygonView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <!--        <RelativeLayout-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="0dp"-->
+        <!--                android:layout_weight="1"-->
+        <!--                android:layout_marginStart="20dp"-->
+        <!--                android:layout_marginEnd="20dp"-->
+        <!--                android:gravity="center">-->
+        <!--            <Button-->
+        <!--                    android:id="@+id/btnImageCrop"-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="50dp"-->
+        <!--                    android:minWidth="150dp"-->
+        <!--                    android:layout_alignParentEnd="true"-->
+        <!--                    android:foreground="?android:selectableItemBackground"-->
+        <!--                    android:shadowRadius="10"-->
+        <!--                    android:textColor="#ffffff"-->
+        <!--            />-->
+        <!--            <Button-->
+        <!--                    android:id="@+id/btnClose"-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="50dp"-->
+        <!--                    android:minWidth="150dp"-->
+        <!--                    android:layout_alignParentStart="true"-->
+        <!--                    android:foreground="?android:selectableItemBackground"-->
+        <!--                    android:shadowRadius="10"-->
+        <!--                    android:textColor="#ffffff"-->
+        <!--            />-->
+        <!--        </RelativeLayout>-->
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/halfTransparentBackground"
+        android:padding="150dp"
+        />
+</RelativeLayout>

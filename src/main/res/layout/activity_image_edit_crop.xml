@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".EditCropActivity">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#000"
+            android:orientation="vertical"
+            android:weightSum="10"
+            tools:context="com.labters.documentscanner.EditCropActivity">
+
+        <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="#fff">
+            <LinearLayout
+                    android:id="@+id/btnBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:foreground="?android:selectableItemBackground"
+                    android:gravity="center_vertical">
+
+                <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/ic_back" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:padding="5dp"
+                        android:text="編集"
+                        android:textColor="#000" />
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/ivTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="8dp"
+                    android:foreground="?android:selectableItemBackground"
+                    android:padding="5dp"
+                    android:text="プレビュー"
+                    android:textColor="#000"
+                    android:textFontWeight="600"
+                    android:textStyle="bold" />
+
+            <TextView
+                    android:id="@+id/btnDone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="8dp"
+                    android:foreground="?android:selectableItemBackground"
+                    android:padding="5dp"
+                    android:text="完了"
+                    android:textColor="#000" />
+        </RelativeLayout>
+
+        <ImageView
+                android:layout_weight="8"
+                android:id="@+id/imgBitmap"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible" />
+
+        <RelativeLayout
+                android:elevation="4dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="#121212">
+            <ImageView
+                    android:tint="#fff"
+                    android:id="@+id/ivRotate"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:foreground="?android:selectableItemBackground"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_rotate_new" />
+
+            <ImageView
+                    android:tint="#fff"
+                    android:id="@+id/ivFilter"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:foreground="?android:selectableItemBackground"
+                    android:padding="5dp"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/ic_filter" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>
